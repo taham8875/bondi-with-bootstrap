@@ -1,0 +1,149 @@
+/* start variables */
+
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #d7d7d7;
+}
+
+
+/* end variables */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color)
+}
+
+.navbar .search {
+  color: var(--green-color);
+  border-left: 1px solid var(--green-color);
+}
+
+@media (max-width: 991px) {
+  .navbar .search {
+    border-left: none;
+    padding-left: 0!important;
+  }
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.main-btn:hover,
+.main-btn:active,
+.main-btn:focus-visible {
+  background-color: var(--red-color)!important;
+  color: var(--yellow-color)!important;
+  border-color: transparent!important;
+}
+
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+
+.landing h1 {
+  font-weight: normal;
+  font-size: 3.25rem;
+}
+
+.main-heading::before {
+  content: "";
+  position: absolute;
+  background-color: var(--green-color);
+  width: 220px;
+  height: 1px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icon-holder {
+  height: 215px;
+}
+
+.features .icon-holder i {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .number {
+  color: var(--section-color);
+  font-size: 11rem;
+}
+
+.features .icon {
+  color: var(--green-color);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2 ease;
+  cursor: pointer;
+}
+
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.our-work ul :not(.active):hover {
+  color: var(--red-color);
+}
+
+.stuff .description {
+  max-width: 500px;
+}
+
+.stuff .image {
+  display: flex;
+  justify-content: flex-end;
+}
